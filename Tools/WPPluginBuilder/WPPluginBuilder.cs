@@ -22,7 +22,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace AGWC.WPTools
+namespace WPTools.NET
 {
     public class WPPluginBuilder
     {
