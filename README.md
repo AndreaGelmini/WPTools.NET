@@ -4,16 +4,16 @@ WPTools.NET: A .NET-based project for WordPress plugin development. This reposit
 
 ## Features
 
-- **Configuration-based:** Uses a `composer.json` file to define the files and directories to be copied, as well as include/exclude patterns.
-- **Recursive directory copying:** Copies directories and their contents recursively.
-- **Customizable:** The configuration file allows you to specify the entry point, output directory, and files to be included or excluded.
+-   **Configuration-based:** Uses a `composer.json` file to define the files and directories to be copied, as well as include/exclude patterns.
+-   **Recursive directory copying:** Copies directories and their contents recursively.
+-   **Customizable:** The configuration file allows you to specify the entry point, output directory, and files to be included or excluded.
 
 ## Getting Started
 
 ### Prerequisites
 
-- [.NET SDK](https://dotnet.microsoft.com/en-us/download)
-- [Git](https://git-scm.com/)
+-   [.NET SDK](https://dotnet.microsoft.com/en-us/download)
+-   [Git](https://git-scm.com/)
 
 ### Installation
 
@@ -35,21 +35,21 @@ WPTools.NET: A .NET-based project for WordPress plugin development. This reposit
 
     ```json
     {
-      "name": "your-plugin-name",
-      "description": "A description of your WordPress plugin",
-      "wp-build-config": {
-        "entry": "/",
-        "output": "dist",
-        "files": ["your-plugin-file.php", "your-plugin-directory"],
-        "exclude": ["node_modules", ".git"]
-      }
+        "name": "your-plugin-name",
+        "description": "A description of your WordPress plugin",
+        "wp-build-config": {
+            "entry": "/",
+            "output": "dist",
+            "files": ["your-plugin-file.php", "your-plugin-directory"],
+            "exclude": ["node_modules", ".git"]
+        }
     }
     ```
 
 2.  Build the project to create an executable file:
 
     ```bash
-    dotnet build wp-plugin-builder.csproj -c Release
+    dotnet build Tools\WPPluginBuilder\wp-plugin-builder.csproj -c Release
     ```
 
     This will generate the output in the [net7.0](http://_vscodecontentref_/1) directory.
@@ -57,7 +57,7 @@ WPTools.NET: A .NET-based project for WordPress plugin development. This reposit
 3.  Run the `WPPluginBuilder` from the command line, providing the output directory as an argument (optional):
 
     ```bash
-    dotnet run --project wp-plugin-builder.csproj -- [output_directory]
+    dotnet build Tools\WPPluginBuilder\wp-plugin-builder.csproj -c Release -o C:\xampp\htdocs\WPSite\bin
     ```
 
     Alternatively, you can run the generated executable file directly:
